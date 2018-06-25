@@ -1,0 +1,95 @@
+<view class="page">
+  <view class="page__bd">
+    <view style="width:100%;text-align:center;margin-top:20rpx;" bindtap='scanCode'>
+      <image src="/images/scan.png" style="width:200rpx;height:150rpx;"></image>
+    </view>
+    <view class="weui-cells__title">扫描会员卡信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">卡号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" value="{{cardNum}}" disabled/>
+        </view>
+
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">持卡人</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" value="{{name}}" disabled/>
+        </view>
+
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="" value="{{phone}}" disabled/>
+        </view>
+
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">当前积分</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input type="number" class="weui-input" value='{{integral}}' disabled/>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">当前余额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input type="number" class="weui-input" value='{{balance}}' disabled/>
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+  <view class="page__bd">
+
+    <view class="weui-cells__title">积分变化操作</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+          <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+          <view class="weui-cell__bd">{{item.name}}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+            <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+          </view>
+        </label>
+      </radio-group>
+    </view>
+
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">积分</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input type="number" class="weui-input" placeholder="请输入积分" value='{{price}}' bindblur='inputPrice'/>
+        </view>
+      </view>
+    </view>
+   <view class="weui-btn-area" style="width:90%;">
+      <button class="weui-btn" type="primary" bindtap="submit" disabled='{{!canSubmit}}'>确定</button>
+    </view>
+  </view>
+
+</view>

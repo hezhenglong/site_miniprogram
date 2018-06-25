@@ -1,0 +1,114 @@
+/**index.wxss**/
+.vipcard{
+  display: flex;
+  flex-direction: column;
+  width:92%;
+  height:380rpx;
+  border-radius: 20rpx;
+  color:#FFF;
+  font-size:36rpx;
+  background: linear-gradient(#61aadb,#61aadb, #33ccff,#61aadb,#61aadb);
+  margin-top:20rpx;
+}
+
+.logo{
+  width:120rpx;
+  margin-top:20rpx;
+  margin-left:50rpx;
+  float:left;
+}
+
+.company{
+   float:left;
+   margin-left:20rpx;
+   margin-top:30rpx;
+   width:200rpx;
+   font-size:35rpx;
+}
+
+.cardname{
+   float:left;
+   margin-top:80rpx; 
+   margin-left:-200rpx;
+}
+.code{
+    float:right;
+    width:60rpx;
+    margin-top:40rpx;
+    margin-right:50rpx;
+}
+
+.number{
+  width:100%;
+  text-align: left;
+  margin-top:160rpx;
+}
+
+.num{
+  margin-left:70rpx;
+  font-size:40rpx;
+}
+
+.mine{
+  margin-top:30rpx;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  width:92%;
+  border-radius: 20rpx;
+}
+
+.userinfo {
+  align-items: left;
+  width:100%;
+}
+
+.userinfo-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  float:left;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  float:left;
+  margin: 50rpx 10rpx;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+
+.userinfo-level{
+  float:right;
+  margin: 50rpx 10rpx;
+  font-size: 40rpx;
+  line-height: 40rpx;
+  color: rgb(238,199,16);
+}
+
+.cardinfo{
+  width:100%;
+  text-align: center;
+}
+
+.header-info{
+  color: #aaa;
+}
+
+.options{
+  margin-top:50rpx;
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  width:92%;
+}
+
+.btnOpen{
+  width:280rpx;
+  border-radius: 20rpx;
+  background-color:  #33ccff;
+  color:#FFF;
+  margin-top:-60rpx;
+}
+

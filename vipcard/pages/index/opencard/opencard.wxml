@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view class="page container">
+  <view class="vipcard">
+    <view>
+      <image class="logo" src="/images/card.png" mode='widthFix'></image>
+      <text class="company">欢迎办理杰海会员尊享卡</text>
+      <text class="vip">V I P</text>
+      <text class="help">Tel：咨询电话 027-84808278</text>
+    </view>
+
+  </view>
+
+  <view class="register"></view>
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">姓名</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="请输入姓名" value="{{name}}" bindblur='inputName'/>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input weui-cell_vcode">
+      <view class="weui-cell__hd">
+        <view class="weui-label">手机号</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value="{{phone}}" placeholder="请输入手机号" disabled />
+      </view>
+      <view class="weui-cell__ft">
+        <button class="btnphonenum" disabled="{{phone==''?false:true}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">验证微信手机 </button>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">生日</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="date" value="{{date}}" start="1950-07-01" end="2017-09-01" bindchange="bindDateChange">
+          <view class="weui-input">{{date}}</view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input" bindtap='chooseAddress'>
+      <view class="weui-cell__hd">
+        <view class="weui-label">地址</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder="" value="{{address}}" disabled='true'/>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+
+    
+
+
+  </view>
+<view style="text-align:left;width:100%;margin-top:20rpx;font-size:35rpx;">
+      <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            阅读并同意
+            <navigator url="/pages/index/condition/condition" class="weui-agree__link">《相关条款》</navigator>
+          </view>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="weui-btn-area" style="width:90%;">
+      <button class="weui-btn" type="primary" bindtap="register" disabled='{{!isAgree}}'>确定</button>
+    </view>
+</view>

@@ -1,0 +1,33 @@
+/* pages/cases.wxss */
+.cases{
+  width: 100%;
+  text-align: center;
+  margin-top:10px;
+  padding-bottom: 60px;
+  background-color: #FFF;
+}
+
+.cases .case{
+  width:46.5%;
+  float:left;
+  margin-left:2%;
+  margin-top:3px;
+  text-align: left;
+}
+
+.cases .case image{
+  width:100%;
+}
+
+.brand-header{
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+.case_content{
+  width:100%;
+  float:left;
+}
+
+
+

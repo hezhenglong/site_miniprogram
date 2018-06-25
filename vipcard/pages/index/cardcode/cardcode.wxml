@@ -1,0 +1,11 @@
+<!--pages/index/cardcode/cardcode.wxml-->
+<view class="canvas-box">
+  <canvas style="width: 686rpx;height: 686rpx;background:#f1f1f1;margin:150rpx 30rpx auto auto;" canvas-id="mycanvas"/>
+
+  <text style="font-size:50rpx;">{{placeholder}}</text>
+  
+</view>
+
+<view class="canvas-box" style="margin-top:100rpx;">
+    <text style="font-size:30rpx;color:rgb(160,160,160);">请在结算时出示</text>
+</view>

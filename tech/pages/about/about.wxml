@@ -1,0 +1,21 @@
+<!--pages/about/about.wxml-->
+<view class="page">
+  <view class="banner">
+     <image src="http://jiehai.gs/program/about_banner.png" mode="widthFix" style="width:100%;"/>
+  </view>
+  <view class="content">
+      <image src="http://jiehai.gs/program/about_us.png" mode="widthFix" style="width:100%;"/>
+  </view>
+ <view class="content">
+      <image src="http://jiehai.gs/program/about_advantage.png" mode="widthFix" style="width:100%;"/>
+  </view>
+   <view class="content">
+      <image src="http://jiehai.gs/program/about_address.png" mode="widthFix" style="width:100%;"/>
+  </view>
+</view>
+
+
+<contact-button type="default-dark" size="20" session-from="weapp" class="img-plus-style zindex100 yc">
+</contact-button>
+<image src="/images/kefu.png" class="img-plus-style"></image>  
+<image src="/images/call.png" class="img-plus-style1" bindtap="calling"></image>

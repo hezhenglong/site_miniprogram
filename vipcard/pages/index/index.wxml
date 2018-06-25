@@ -1,0 +1,84 @@
+<!--index.wxml-->
+<view class="page container">
+  <view class="vipcard">
+    <view>
+      <image class="logo" src="/images/logo.png" mode='widthFix'></image>
+      <text class="company">杰海科技</text>
+      <text class="cardname">杰海会员尊享卡</text>
+      <image  wx:if="{{hasVip}}" class="code" src="/images/code.png" mode='widthFix' bindtap='openCode'></image>
+    </view>
+    <view class="number">
+    <text class="num"  wx:if="{{!hasUserInfo && canIUse}}"> Tel：027-84808298 </text>
+    <button wx:elif="{{!hasVip}}" class="btnOpen" bindtap='openCard'> 立即开卡 </button>
+    <block wx:else>
+      <text class="num">{{cardNum}}</text>
+    </block>
+      
+    </view>
+  </view>
+
+  <view class="mine">
+    <view class="userinfo">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{name ? name : userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="cardinfo">
+      <view class="weui-flex header-info">
+        <view class="weui-flex__item">
+          <view class="placeholder">我的余额</view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">积分</view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">会员等级</view>
+        </view>
+      </view>
+      <view class="weui-flex">
+        <view class="weui-flex__item">
+          <view class="placeholder">{{balance}}</view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">{{integral}}</view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder" wx:if="{{level >= arrLevel[0]}}"> 钻石会员 </view>
+          <view class="placeholder" wx:elif="{{level >= arrLevel[1]}}"> 铂金会员 </view>
+          <view class="placeholder" wx:elif="{{level >= arrLevel[2]}}"> 黄金会员 </view>
+          <view class="placeholder" wx:elif="{{level > 0}}"> 普通会员 </view>
+          <view class="placeholder" wx:else> - </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="options">
+    <view class="weui-cells weui-cells_after-title">
+      <navigator  wx:if="{{hasVip}}" url="/pages/index/myinfo/myinfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">我的信息</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator wx:for="{{menus}}" wx:key="unique" url="/pages/index/news/news?url={{item.url}}" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">{{item.name}}</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+
+<navigator  wx:if="{{isManager}}" url="/pages/manager/manager" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd" style="color:red;">管理入口</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      
+    </view>
+  </view>
+
+
+</view>
+
+
+<contact-button type="default-dark" size="20" session-from="weapp" class="img-plus-style zindex100 yc">
+</contact-button>
+<image src="/images/kefu.png" class="img-plus-style"></image>  
+<image src="/images/call.png" class="img-plus-style1" bindtap="calling"></image>

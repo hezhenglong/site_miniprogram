@@ -1,0 +1,6 @@
+/* pages/index/cardcode/cardcode.wxss */
+
+.canvas-box{
+  width:100%;
+  text-align: center;
+}

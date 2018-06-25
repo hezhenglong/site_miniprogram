@@ -1,0 +1,14 @@
+/* pages/manager/manager.wxss */
+
+.block{
+  width:92%;
+  height:200rpx;
+  line-height: 200rpx;
+  color:#FFF;
+  font-size:50rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(#61aadb,#61aadb, #33ccff,#61aadb,#61aadb);
+  margin: 0 auto ;
+  margin-top:30rpx;
+  text-align: center;
+}

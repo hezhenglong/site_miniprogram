@@ -1,0 +1,12 @@
+<view class="page">
+   <view class="block" bindtap='integralChange'>
+      积分操作
+   </view>
+
+
+   <view class="block" bindtap='balanceChange'>
+      余额操作
+   </view>
+
+</view>
+

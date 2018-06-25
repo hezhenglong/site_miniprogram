@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="banner swiper-container">
+    <swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange">
+      <block wx:for="{{imgUrls}}" wx:key="">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{imgUrls}}" wx:key="unique">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+
+  <view class="brand">
+    <image src="http://zs.jiehai.gs/program/index_brand.png" mode="widthFix" style="width:100%;" />
+  </view>
+
+  <view class="cases">
+    <view class="brand-header">
+      <view class="weui-article__h1">案例</view>
+      <view class="weui-article__h3">- Case Show -</view>
+    </view>
+    <view class="cases-body">
+      <view class="case">
+        <image mode="widthFix" src="{{imgCaseUrls[0]}}"></image>
+      </view>
+      <view class="case">
+        <image mode="widthFix" src="{{imgCaseUrls[1]}}"></image>
+      </view>
+    </view>
+
+    <view>
+      <button class="button" bindtap='morecase'  style="top:40px;">查看更多</button>
+    </view>
+
+  </view>
+
+
+
+  <view class="cases">
+    <view class="brand-header">
+      <view class="weui-article__h1">资讯</view>
+      <view class="weui-article__h3">- News -</view>
+    </view>
+    <view class="cases-body">
+      <view class="weui-cells weui-cells_after-title">
+
+        <view class="weui-cell">
+            <image mode="widthFix" src="{{imgNewsUrls[0]}}" style="margin-right: 5px;vertical-align: middle;width:100%;"></image>
+        </view>
+       <view class="weui-cell">
+            <image mode="widthFix" src="{{imgNewsUrls[1]}}" style="margin-right: 5px;vertical-align: middle;width:100%;"></image>
+        </view>
+        <view class="weui-cell">
+            <image mode="widthFix" src="{{imgNewsUrls[2]}}" style="margin-right: 5px;vertical-align: middle;width:100%;"></image>
+        </view>
+
+      </view>
+    </view>
+    <view>
+        <button class="button"   bindtap='morenews'>查看更多</button>
+    </view>
+  </view>
+
+</view>
+
+
+<contact-button type="default-dark" size="20" session-from="weapp" class="img-plus-style zindex100 yc">
+</contact-button>
+<image src="/images/kefu.png" class="img-plus-style"></image>  
+<image src="/images/call.png" class="img-plus-style1" bindtap="calling"></image>

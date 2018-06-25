@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/opencard/opencard",
+    "pages/index/cardcode/cardcode",
+    "pages/index/myinfo/myinfo",
+    "pages/manager/manager",
+    "pages/manager/balance/balance",
+    "pages/manager/integral/integral",
+    "pages/index/news/news",
+    "pages/index/condition/condition"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "杰海会员尊享卡",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  }
+}

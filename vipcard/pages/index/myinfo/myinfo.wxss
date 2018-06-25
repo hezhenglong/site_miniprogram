@@ -1,0 +1,4 @@
+/* pages/index/myinfo/myinfo.wxss */
+.weui-input{
+  color:rgb(180,180,180);
+}

@@ -1,0 +1,2 @@
+<!--pages/index/condition/condition.wxml-->
+<web-view src="https://e20.xin/api/vipcard/condition.html"></web-view>

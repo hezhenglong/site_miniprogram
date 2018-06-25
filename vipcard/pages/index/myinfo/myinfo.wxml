@@ -1,0 +1,99 @@
+<!--pages/index/myinfo/myinfo.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">会员信息</view>
+    <view class="page__desc">Vip Information</view>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{name}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">手机</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{phone}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">生日</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{birthday}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">地址</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{address}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">卡号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{cardNum}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">余额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{balance}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">积分</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input">{{integral}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label">会员等级</view>
+        </view>
+        <view class="weui-cell__bd">
+          <view class="weui-input" wx:if="{{level >= arrLevel[0]}}"> 钻石会员 </view>
+          <view class="weui-input" wx:elif="{{level >= arrLevel[1]}}"> 铂金会员 </view>
+          <view class="weui-input" wx:elif="{{level >= arrLevel[2]}}"> 黄金会员 </view>
+          <view class="weui-input" wx:elif="{{level > 0}}"> 普通会员 </view>
+          <view class="weui-input" wx:else> - </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
